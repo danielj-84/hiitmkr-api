@@ -6,7 +6,7 @@ const helmet = require("helmet");
 
 //Import config
 require("dotenv").config();
-// const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 //Create Express App
 const app = express();
@@ -65,7 +65,7 @@ app.post("/login", (req, res) => {
 });
 
 //Server
-// app.listen(PORT, () => {
-//   console.log(`App is running on PORT ${PORT}`);
-// });
-app.listen(3001)
+app.listen(PORT, () => {
+  console.log(`App is running on PORT ${PORT}`);
+});
+// app.listen(3001)
