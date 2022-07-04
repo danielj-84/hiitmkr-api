@@ -19,6 +19,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Set Security Configs
 app.use(helmet());
 
+app.get("/", (_req, res) => {
+  res.send("HIITmkr API - Welcome!");
+})
+
 //Establish refresh Token route
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
